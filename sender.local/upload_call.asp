@@ -127,37 +127,6 @@
 
 			Set objHttp = Nothing
 
-			'formData = "--" & boundary & vbCrLf & _
-			'	"Content-Disposition: form-data; name=""file""; filename=""" & filePath & """" & vbCrLf & _
-			'	"Content-Type: " & x_TIPO & vbCrLf & _
-			'	vbCrLf & _
-			'	binaryFile & vbCrLf & _
-			'	"--" & boundary & "--"
-			'	'"Content-Transfer-Encoding: base64" & vbCrLf & _
-
-			' Boundary inicial
-			'BINARYPOST = (vbCrLf & "--" & boundary & vbCrLf)
-			' 01 - className
-			'BINARYPOST = BINARYPOST & ("" & _ 
-			'"Content-Disposition: form-data; name=""className""" & vbCrLf & vbCrLf & "Adquiriente" & vbCrLf)
-
-			' 02 - properties
-			'BINARYPOST = BINARYPOST & ("--" & boundary & vbCrLf)
-			'BINARYPOST = BINARYPOST & ("" & _ 
-			'"Content-Disposition: form-data; name=""properties""" & vbCrLf & vbCrLf & "{data:'value'}" & vbCrLf)
-
-			' 03 - file
-			'BINARYPOST = BINARYPOST & ("--" & boundary & vbCrLf)
-			'BINARYPOST = BINARYPOST & ("" & _ 
-			'"Content-Disposition: form-data; name=""file""; filename=""" & Replace(Replace(folderRoot, "\", "/"), "//", "/") + path_filename & """" & _
-			'vbCrLf & "Content-Type: " & x_TIPO & vbCrLf & vbCrLf)
-
-			'objXMLhttp.send stringToByte(BINARYPOST)	' 1- send HTTP
-
-			'objXMLhttp.send binaryFile					' 2- send HTTP
-
-			'objXMLhttp.send stringToByte(vbCrLf & "--" & boundary & "--"  & vbCrLf)	' 3- send HTTP
-
 			' Se retorna la URL para actualizar en la base de datos de imágenes
 			publishFileNET = strResponse
 
